@@ -93,8 +93,8 @@ TEST(VerifyModel, TestEmptyModel) {
                            /*description=*/0, /*buffers=*/0);
   ::tflite::FinishModelBuffer(builder, model);
 
-  ASSERT_TRUE(Verify(builder.GetBufferPointer(), builder.GetSize(),
-                     DefaultErrorReporter()));
+  ASSERT_FALSE(Verify(builder.GetBufferPointer(), builder.GetSize(),
+                      MutableOpResolver{}, DefaultErrorReporter()));
 }
 
 TEST(VerifyModel, TestSimpleModel) {

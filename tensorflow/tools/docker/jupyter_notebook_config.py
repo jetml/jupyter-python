@@ -28,4 +28,9 @@ if 'PASSWORD' in os.environ:
   else:
     c.NotebookApp.password = ''
     c.NotebookApp.token = ''
-  del os.environ['PASSWORD']
+  del os.environ['PASSWORD']  
+elif 'TOKEN' in os.environ:
+  token = os.environ['TOKEN']
+  if token:
+  	c.NotebookApp.token = token
+  del os.environ['TOKEN']

@@ -46,6 +46,8 @@ RUN pip --no-cache-dir install \
         pandas \
         && \
     python -m ipykernel.kernelspec
+    
+RUN pip install --upgrade tensorflow-gpu
 
 # RUN ln -s -f /usr/bin/python3 /usr/bin/python#
 

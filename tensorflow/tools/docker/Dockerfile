@@ -63,7 +63,7 @@ COPY run_jupyter.sh /
 # TensorBoard
 EXPOSE 6006
 # IPython
-EXPOSE 8888
+#EXPOSE 8888
 
 WORKDIR "/notebooks"
 

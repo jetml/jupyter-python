@@ -28,11 +28,14 @@ RUN pip --no-cache-dir install \
         h5py \
         ipykernel \
         jupyter \
+        keras \
         matplotlib \
         numpy \
         pandas \
         scipy \
         sklearn \
+        http://download.pytorch.org/whl/cpu/torch-0.4.0-cp27-cp27mu-linux_x86_64.whl  \
+        torchvision \
         && \
     python -m ipykernel.kernelspec
 

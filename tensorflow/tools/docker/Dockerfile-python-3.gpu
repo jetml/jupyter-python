@@ -35,11 +35,14 @@ RUN pip3 --no-cache-dir install \
         h5py \
         ipykernel \
         jupyter \
+        keras \
         matplotlib \
         numpy \
         pandas \
         scipy \
         sklearn \
+        http://download.pytorch.org/whl/cu90/torch-0.4.0-cp35-cp35m-linux_x86_64.whl \
+        torchvision \
         && \
     python3 -m ipykernel.kernelspec
 

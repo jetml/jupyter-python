@@ -14,5 +14,6 @@
 # limitations under the License.
 # ==============================================================================
 
+pip3 install -r /notebooks/requirements.txt || pip install -r /notebooks/requirements.txt || echo "no requirements found" 
 
 jupyter notebook "$@"

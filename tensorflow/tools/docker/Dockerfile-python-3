@@ -6,6 +6,7 @@ LABEL maintainer="Craig Citro <craigcitro@google.com>"
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         curl \
+        dos2unix \
         libfreetype6-dev \
         libpng12-dev \
         libzmq3-dev \
@@ -69,5 +70,7 @@ EXPOSE 6006
 #EXPOSE 8888
 
 WORKDIR "/notebooks"
+
+RUN dos2unix /run_jupyter.sh
 
 CMD ["/run_jupyter.sh", "--allow-root"]

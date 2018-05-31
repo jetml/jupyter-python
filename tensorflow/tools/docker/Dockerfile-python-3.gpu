@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         cuda-cusolver-9-0 \
         cuda-cusparse-9-0 \
         curl \
+        dos2unix \
         libcudnn7=7.0.5.15-1+cuda9.0 \
         libfreetype6-dev \
         libpng12-dev \
@@ -81,5 +82,7 @@ EXPOSE 6006
 EXPOSE 8888
 
 WORKDIR "/notebooks"
+
+RUN dos2unix /run_jupyter.sh
 
 CMD ["/run_jupyter.sh", "--allow-root"]

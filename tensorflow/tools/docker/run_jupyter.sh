@@ -16,4 +16,6 @@
 
 pip3 install -r /notebooks/requirements.txt || pip install -r /notebooks/requirements.txt
 
+/notebooks/start.sh || echo "no start.sh"
+
 jupyter notebook "$@"
